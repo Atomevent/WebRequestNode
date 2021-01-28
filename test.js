@@ -13,7 +13,7 @@ form.addEventListener("submit",(e)=>{
 });
 
 forward.addEventListener("click",(e)=>{
-    fetch(`https://${url}/f`, {
+    fetch(`http://${url}/f`, {
         method: 'GET',
        
         headers:{
@@ -33,7 +33,7 @@ forward.addEventListener("click",(e)=>{
   
 });
 left.addEventListener("click",(e)=>{
-    fetch(`https://${url}/l`, {
+    fetch(`http://${url}/l`, {
         method: 'GET',
     
         headers:{
@@ -52,7 +52,7 @@ left.addEventListener("click",(e)=>{
     console.log("clickl");
 });
 right.addEventListener("click",(e)=>{
-    fetch(`https://${url}/r`, {
+    fetch(`http://${url}/r`, {
         method: 'GET',
         
         headers:{
@@ -72,7 +72,7 @@ right.addEventListener("click",(e)=>{
   
 })
 stop.addEventListener("click",(e)=>{
-    fetch(`https://${url}/s`, {
+    fetch(`http://${url}/s`, {
         method: 'GET',
         
         headers:{
