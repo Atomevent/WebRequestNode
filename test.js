@@ -1,11 +1,19 @@
-
+const input = document.getElementsByName("IP")[0];
+const form = document.getElementsByName("form")[0];
 const forward = document.getElementsByName("f")[0];
 const left = document.getElementsByName("l")[0];
 const right = document.getElementsByName("r")[0];
 const stop = document.getElementsByName("s")[0];
+var url;
+
+form.addEventListener("submit",(e)=>{
+  e.preventDefault();
+  url = input.value;
+  console.log(url);
+});
 
 forward.addEventListener("click",(e)=>{
-    fetch('http://192.168.1.52:5500/f', {
+    fetch(`http://${url}/f`, {
         method: 'GET',
        
         headers:{
@@ -25,7 +33,7 @@ forward.addEventListener("click",(e)=>{
   
 });
 left.addEventListener("click",(e)=>{
-    fetch('http://192.168.1.52:5500/l', {
+    fetch(`http://${url}/l`, {
         method: 'GET',
     
         headers:{
@@ -44,7 +52,7 @@ left.addEventListener("click",(e)=>{
     console.log("clickl");
 });
 right.addEventListener("click",(e)=>{
-    fetch('http://192.168.1.52:5500/r', {
+    fetch(`http://${url}/r`, {
         method: 'GET',
         
         headers:{
@@ -64,7 +72,7 @@ right.addEventListener("click",(e)=>{
   
 })
 stop.addEventListener("click",(e)=>{
-    fetch('http://192.168.1.52:5500/s', {
+    fetch(`http://${url}/s`, {
         method: 'GET',
         
         headers:{

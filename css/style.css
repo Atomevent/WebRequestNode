@@ -35,3 +35,17 @@ button{
     margin:30px;
     font-size: 3rem;
 }
+.content #ip{
+    height:40px;
+    width:300px;
+    background-color: black;
+    border: var(--light-color) solid 3px;
+    margin:50px 10px;
+    font-size: 1rem;
+    color:var(--light-color);
+}
+.content #ip:focus{
+    outline: 0;
+    caret-color: var(--light-color);
+    transform: scale(0.98);
+}
